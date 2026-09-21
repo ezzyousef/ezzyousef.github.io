@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ezzeldien Yousef — Materials Researcher</title>
+<meta name="description" content="PhD researcher in Mechanical and Industrial Engineering at the University of Toronto. Polymer electrolytes, supercapacitors, nanomaterials and aerogel fibres. 12 peer-reviewed publications.">
+<meta property="og:title" content="Ezzeldien Yousef — Materials Researcher">
+<meta property="og:description" content="PhD researcher at the University of Toronto. Polymer electrolytes, supercapacitors, nanomaterials and aerogel fibres.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="assets/portrait.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D6E8C'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='%23fff'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Karla:wght@400;500;600;700&family=Spectral:wght@500;600&display=swap">
+<style>
+  :root {
+    --ground: #EDF1F4;
+    --surface: #FFFFFF;
+    --sunken: #E3EAEF;
+    --ink: #0F1720;
+    --muted: #5A6975;
+    --hair: #D2DCE3;
+    --accent: #0D6E8C;
+    --accent-soft: #DBEBF1;
+    --haze-a: rgba(127, 200, 222, .55);
+    --haze-b: rgba(127, 200, 222, 0);
+    --shadow: 0 1px 2px rgba(15, 23, 32, .05), 0 8px 24px -16px rgba(15, 23, 32, .18);
+
+    --display: "Spectral", Georgia, "Times New Roman", serif;
+    --body: "Karla", "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+
+    --gutter: clamp(20px, 5vw, 56px);
+    --measure: 68ch;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0A1014;
+      --surface: #121B21;
+      --sunken: #0E161B;
+      --ink: #E6EEF2;
+      --muted: #8FA1AC;
+      --hair: #1F2C33;
+      --accent: #4FC7E8;
+      --accent-soft: #102A34;
+      --haze-a: rgba(79, 199, 232, .22);
+      --haze-b: rgba(79, 199, 232, 0);
+      --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px -16px rgba(0, 0, 0, .8);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0A1014;
+    --surface: #121B21;
+    --sunken: #0E161B;
+    --ink: #E6EEF2;
+    --muted: #8FA1AC;
+    --hair: #1F2C33;
+    --accent: #4FC7E8;
+    --accent-soft: #102A34;
+    --haze-a: rgba(79, 199, 232, .22);
+    --haze-b: rgba(79, 199, 232, 0);
+    --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 8px 24px -16px rgba(0, 0, 0, .8);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  ::selection { background: var(--accent-soft); }
+
+  /* ---------- nav ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--hair);
+  }
+
+  .nav-in {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 11px var(--gutter);
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .nav-name {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: auto;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .02em;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 3px 0;
+    border-bottom: 1px solid transparent;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus-visible { color: var(--ink); border-bottom-color: var(--accent); }
+
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ---------- shell ---------- */
+  .shell { max-width: 1080px; margin: 0 auto; padding-inline: var(--gutter); }
+
+  section { padding-block: clamp(48px, 7vw, 82px) 0; scroll-margin-top: 64px; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(26px, 3.4vw, 34px);
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  h3 { font-family: var(--display); font-weight: 600; font-size: 19px; margin: 0 0 4px; }
+
+  p { margin: 0 0 16px; max-width: var(--measure); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(46px, 8vw, 92px) clamp(34px, 5vw, 58px);
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: -30% -10% auto auto;
+    width: min(760px, 95vw);
+    aspect-ratio: 1;
+    background: radial-gradient(circle at 60% 40%, var(--haze-a), var(--haze-b) 62%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-in {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(28px, 5vw, 60px);
+    align-items: center;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(38px, 6.6vw, 66px);
+    line-height: 1.02;
+    letter-spacing: -.025em;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+
+  .role {
+    font-size: clamp(17px, 2vw, 20px);
+    color: var(--muted);
+    max-width: 46ch;
+    margin: 0 0 26px;
+  }
+
+  .role strong { color: var(--ink); font-weight: 600; }
+
+  .portrait {
+    width: clamp(132px, 19vw, 208px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--hair);
+    box-shadow: var(--shadow);
+  }
+
+  @media (max-width: 680px) {
+    .hero-in { grid-template-columns: 1fr; }
+    .portrait { order: -1; }
+  }
+
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  .link {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: .01em;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--hair);
+    border-radius: 100px;
+    padding: 8px 16px;
+    transition: border-color .15s, color .15s;
+  }
+
+  .link:hover, .link:focus-visible { border-color: var(--accent); color: var(--accent); }
+
+  .link.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  .link.primary:hover, .link.primary:focus-visible { color: #fff; opacity: .9; }
+
+  :root[data-theme="dark"] .link.primary,
+  :root:not([data-theme="light"]) .link.primary { color: #06161C; }
+
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .link.primary { color: #fff; }
+  }
+
+  /* ---------- stat band ---------- */
+  .band {
+    border-block: 1px solid var(--hair);
+    margin-top: clamp(34px, 5vw, 56px);
+  }
+
+  .band-in {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-inline: var(--gutter);
+  }
+
+  .stat { padding: 22px 18px 22px 0; border-right: 1px solid var(--hair); }
+
+  .stat:last-child { border-right: 0; }
+
+  .stat-n {
+    font-family: var(--display);
+    font-size: clamp(24px, 3.2vw, 34px);
+    font-weight: 600;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .stat-l {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  @media (max-width: 640px) {
+    .band-in { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: 0; }
+    .stat:nth-child(-n+2) { border-bottom: 1px solid var(--hair); }
+  }
+
+  /* ---------- research tags ---------- */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; padding: 0; list-style: none; }
+
+  .tags li {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  /* ---------- publications ---------- */
+  .pubs { list-style: none; margin: 0; padding: 0; counter-reset: pub; }
+
+  .pub {
+    counter-increment: pub;
+    display: grid;
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+    gap: 4px 12px;
+    padding: 18px 0;
+    border-top: 1px solid var(--hair);
+  }
+
+  .pub:last-child { border-bottom: 1px solid var(--hair); }
+
+  .pub::before {
+    content: counter(pub, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    padding-top: 5px;
+  }
+
+  .pub-t { font-weight: 600; font-size: 16.5px; line-height: 1.4; }
+
+  .pub-t a { color: inherit; text-decoration: none; background-image: linear-gradient(var(--accent), var(--accent)); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .2s; }
+
+  .pub-t a:hover, .pub-t a:focus-visible { background-size: 100% 1px; color: var(--accent); }
+
+  .pub-a { grid-column: 2; font-size: 14.5px; color: var(--muted); }
+
+  .pub-a .me { color: var(--ink); font-weight: 600; }
+
+  .pub-m { grid-column: 2; display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+
+  .pub-j { color: var(--accent); }
+
+  @media (max-width: 560px) {
+    .pub { grid-template-columns: 1fr; }
+    .pub::before { padding-top: 0; }
+    .pub-a, .pub-m { grid-column: 1; }
+  }
+
+  .note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+
+  /* ---------- software ---------- */
+  .lead-proj {
+    background: var(--surface);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: clamp(22px, 3.5vw, 34px);
+    margin-bottom: 26px;
+  }
+
+  .proj-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+
+  .pill {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border-radius: 3px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  .specs { list-style: none; margin: 0 0 20px; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px 24px; }
+
+  .specs li { font-size: 15px; }
+
+  .specs b { font-family: var(--mono); font-size: 13px; color: var(--accent); display: block; }
+
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 8px; }
+
+  figure { margin: 0; }
+
+  .shots img { border: 1px solid var(--hair); border-radius: 5px; background: var(--sunken); }
+
+  figcaption { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 7px; letter-spacing: .02em; }
+
+  .repos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+
+  .repo {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--hair);
+    border-radius: 6px;
+    padding: 16px 18px;
+    background: var(--surface);
+    transition: border-color .15s, transform .15s;
+  }
+
+  .repo:hover, .repo:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
+
+  .repo b { font-family: var(--display); font-size: 16px; font-weight: 600; display: block; margin-bottom: 3px; }
+
+  .repo span { font-size: 14px; color: var(--muted); }
+
+  /* ---------- timeline ---------- */
+  .tl { list-style: none; margin: 0; padding: 0; }
+
+  .tl li { padding: 20px 0; border-top: 1px solid var(--hair); display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 6px 24px; }
+
+  .tl li:last-child { border-bottom: 1px solid var(--hair); }
+
+  .tl .when { font-family: var(--mono); font-size: 12.5px; color: var(--muted); padding-top: 4px; }
+
+  .tl .what p { margin: 6px 0 0; font-size: 15.5px; color: var(--muted); max-width: 62ch; }
+
+  .tl .where { font-size: 15px; color: var(--muted); }
+
+  @media (max-width: 640px) { .tl li { grid-template-columns: 1fr; } }
+
+  /* ---------- two column ---------- */
+  .duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(26px, 4vw, 48px); }
+
+  .plain { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+
+  .plain li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline; font-size: 15.5px; border-bottom: 1px dotted var(--hair); padding-bottom: 9px; }
+
+  .plain .yr { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+  /* ---------- contact ---------- */
+  .contact { margin-top: clamp(48px, 7vw, 82px); border-top: 1px solid var(--hair); background: var(--sunken); }
+
+  .contact-in { max-width: 1080px; margin: 0 auto; padding: clamp(40px, 6vw, 68px) var(--gutter); }
+
+  .contact h2 { margin-bottom: 12px; }
+
+  footer { border-top: 1px solid var(--hair); }
+
+  .foot-in {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 22px var(--gutter) calc(22px + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+
+  .foot-in a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-name">Ezzeldien Yousef</span>
+    <div class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#software">Software</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="shell hero-in">
+    <div>
+      <h1>Ezzeldien Yousef</h1>
+      <p class="role">PhD researcher in <strong>Mechanical &amp; Industrial Engineering</strong> at the University of Toronto. I work on polymer electrolytes, energy storage and aerogel fibres &mdash; and I build the software that turns laboratory data into results.</p>
+      <div class="links">
+        <a class="link primary" href="mailto:ezzyousef@aucegypt.edu">Email me</a>
+        <a class="link" href="https://scholar.google.com/citations?user=m0Rs9oIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="link" href="https://github.com/ezzyousef" target="_blank" rel="noopener">GitHub</a>
+        <a class="link" href="https://www.linkedin.com/in/ezz-eldien-yousef" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Ezzeldien Yousef" width="208" height="208">
+  </div>
+</header>
+
+<div class="band">
+  <div class="band-in">
+    <div class="stat"><span class="stat-n">12</span><span class="stat-l">Peer-reviewed papers</span></div>
+    <div class="stat"><span class="stat-n">7</span><span class="stat-l">Journals reviewed for</span></div>
+    <div class="stat"><span class="stat-n">5</span><span class="stat-l">Open research tools</span></div>
+    <div class="stat"><span class="stat-n">&minus;65&nbsp;&deg;C</span><span class="stat-l">Electrolytes still cycling</span></div>
+  </div>
+</div>
+
+<main class="shell">
+
+  <section id="research">
+    <p class="eyebrow">What I work on</p>
+    <h2>Making energy materials survive the conditions they are actually used in</h2>
+    <p>My research sits between chemistry and engineering: designing materials, measuring what they do, and explaining why. Most of it has been about electrolytes &mdash; the part of an energy-storage device that usually fails first when it gets too cold, too hot or too dry.</p>
+    <p>In my MSc work I tuned ion mobility and molecular confinement in gel electrolytes, and showed supercapacitors that keep cycling far below freezing. My PhD at the Microcellular Plastics Manufacturing Laboratory moves this into polymer processing: lightweight aerogel fibres for thermal insulation, including clothing and wearable applications.</p>
+    <ul class="tags">
+      <li>Polymer electrolytes</li>
+      <li>Supercapacitors</li>
+      <li>Electrochemistry</li>
+      <li>Nanomaterials</li>
+      <li>Aerogel fibres</li>
+      <li>Polymer foaming</li>
+      <li>Electrospinning</li>
+      <li>Thermal insulation</li>
+      <li>Photocatalysis</li>
+      <li>CO&#8322; electroreduction</li>
+      <li>UV shielding</li>
+      <li>Scientific data analysis</li>
+    </ul>
+    <p><strong>Methods I use daily.</strong> Cyclic voltammetry, galvanostatic charge&ndash;discharge, electrochemical impedance spectroscopy and chronoamperometry for devices; SEM, TEM, XRD, EDX, Raman, FTIR, UV&ndash;Vis, BET and TGA for materials. Synthesis by electrospinning, sol&ndash;gel, hydrothermal routes and electrodeposition.</p>
+  </section>
+
+  <section id="publications">
+    <p class="eyebrow">12 peer-reviewed articles</p>
+    <h2>Publications</h2>
+    <ol class="pubs">
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://pubs.rsc.org/ta/article/doi/10.1039/d6ta05502h/1298970/Halide-free-protonic-gel-electrolytes-for-ultra" target="_blank" rel="noopener">Halide-free protonic gel electrolytes for ultra-long-life, extreme-temperature energy storage</a></div>
+        <div class="pub-a"><span class="me">E. Yousef</span>, A. A. Ismail, G. E. Khedr, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">Journal of Materials Chemistry A</span><span>JIF 9.5</span><span>Q1</span><span>First author</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://doi.org/10.1016/j.cej.2026.176245" target="_blank" rel="noopener">Engineering reline/carboxymethyl cellulose eutectogel electrolytes through nanoscale water confinement and coordination-driven ion percolation</a></div>
+        <div class="pub-a">A. A. Akar, M. A. Moselhy, G. E. Khedr, <span class="me">E. Yousef</span>, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">Chemical Engineering Journal</span><span>JIF 13.2</span><span>Q1</span><span>3 citations</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://doi.org/10.1039/D6TA00216A" target="_blank" rel="noopener">Hierarchical aerogel-confined deep eutectic electrolytes for complete water immobilization and high-performance, freeze-tolerant supercapacitors</a></div>
+        <div class="pub-a">M. A. Moselhy, G. E. Khedr, <span class="me">E. Yousef</span>, A. A. Akar, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">Journal of Materials Chemistry A</span><span>JIF 9.5</span><span>Q1</span><span>3 citations</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1385894725122882" target="_blank" rel="noopener">LiBr@PQ-7 electrolyte for voltage-stable, freeze-tolerant supercapacitors</a></div>
+        <div class="pub-a"><span class="me">E. Yousef</span>, G. E. Khedr, A. A. Akar, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">Chemical Engineering Journal</span><span>JIF 13.2</span><span>Q1</span><span>5 citations</span><span>First author</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://pubs.rsc.org/en/content/articlelanding/2025/ta/d5ta00825e/unauth" target="_blank" rel="noopener">Cation-driven hydrogen bond dynamics in energy storage hydrogel electrolytes: unravelling ion&ndash;water&ndash;carbon interactions</a></div>
+        <div class="pub-a"><span class="me">E. Yousef</span>*, A. A. Akar*, A. A. M. Ismail, G. E. Khedr, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">Journal of Materials Chemistry A</span><span>JIF 9.5</span><span>Q1</span><span>15 citations</span><span>Joint first author</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://doi.org/10.1021/acsami.5c20454" target="_blank" rel="noopener">Tuning C&ndash;C coupling and selectivity in the CO&#8322; electrochemical reduction reaction via pyramidal dilute Sn&ndash;Cu alloy</a></div>
+        <div class="pub-a">A. A. Ashour, A. M. Abdelmohsen, G. E. Khedr, K. E. Salem, I. M. Badawy, <span class="me">E. Yousef</span>, A. M. Agour, D. Higgins, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">ACS Applied Materials &amp; Interfaces</span><span>JIF 8.2</span><span>Q1</span><span>7 citations</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://doi.org/10.1021/acsapm.4c01778" target="_blank" rel="noopener">Recycled cellulose acetate/cerium vanadate nanoparticle composite membranes with tuned ultraviolet and blue light shielding capabilities</a></div>
+        <div class="pub-a"><span class="me">E. Yousef</span>, M. M. Taha, M. K. M. Ali, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">ACS Applied Polymer Materials</span><span>JIF 5.0</span><span>Q1</span><span>14 citations</span><span>First author</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://doi.org/10.1002/app.55831" target="_blank" rel="noopener">Optimized poly(methyl methacrylate)/mixed-phase silver vanadate nanocomposites with tuned optical properties and hydrophobicity</a></div>
+        <div class="pub-a"><span class="me">E. Yousef</span>, M. K. M. Ali, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">Journal of Applied Polymer Science</span><span>JIF 2.8</span><span>Q2</span><span>15 citations</span><span>First author</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://doi.org/10.1016/j.optmat.2024.115193" target="_blank" rel="noopener">Tuning the optical properties and hydrophobicity of BiVO&#8324;/PVC/PVP composites as potential candidates for optoelectronic applications</a></div>
+        <div class="pub-a"><span class="me">E. Yousef</span>, M. K. M. Ali, N. K. Allam</div>
+        <div class="pub-m"><span class="pub-j">Optical Materials</span><span>JIF 4.2</span><span>Q1</span><span>30 citations</span><span>First author</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://doi.org/10.1007/s00289-024-05322-w" target="_blank" rel="noopener">Electrospun nanofibrous scaffolds of polylactic acid loaded with ginger/MoO&#8323;/CuO/graphene oxide: biocompatibility and antibacterial activity</a></div>
+        <div class="pub-a"><span class="me">E. Yousef</span>, M. Salah, H. A. Yousef, M. Ibrahim, M. S. Mostafa, H. M. Abd Elkabeer, M. Khalaf, A.-H. M. Rasmey, I. Morad</div>
+        <div class="pub-m"><span class="pub-j">Polymer Bulletin</span><span>JIF 4.0</span><span>Q2</span><span>17 citations</span><span>First author</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://doi.org/10.3390/separations11110320" target="_blank" rel="noopener">Removal of inorganic pollutants and recovery of nutrients from wastewater using electrocoagulation: a review</a></div>
+        <div class="pub-a">M. Ammar, <span class="me">E. Yousef</span>, S. Ashraf, J. Baltrusaitis</div>
+        <div class="pub-m"><span class="pub-j">Separations</span><span>JIF 2.7</span><span>Q3</span><span>23 citations</span></div>
+      </li>
+
+      <li class="pub">
+        <div class="pub-t"><a href="https://www.mdpi.com/2297-8739/10/6/337" target="_blank" rel="noopener">A comprehensive review of the developments in electrocoagulation for removal of contaminants from wastewater</a></div>
+        <div class="pub-a">M. Ammar, <span class="me">E. Yousef</span>, M. A. Mahmoud, S. Ashraf, J. Baltrusaitis</div>
+        <div class="pub-m"><span class="pub-j">Separations</span><span>JIF 2.7</span><span>Q3</span><span>69 citations</span></div>
+      </li>
+
+    </ol>
+    <p class="note">Journal impact factors and citation counts as recorded in September 2026. The current list is on <a href="https://scholar.google.com/citations?user=m0Rs9oIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </section>
+
+  <section id="software">
+    <p class="eyebrow">Research tools I built</p>
+    <h2>Software for the laboratory</h2>
+    <p>I build desktop tools that take instrument files and return finished results and publication figures. I use AI-assisted development for the implementation: I provide the scientific requirements, the equations and the experimental logic, and direct the build. My background is experimental science first and software second, and I would rather say that plainly than overstate it.</p>
+
+    <div class="lead-proj">
+      <div class="proj-head">
+        <h3>AeroLab Studio</h3>
+        <span class="pill">Open source</span>
+      </div>
+      <p>An analysis workbench for aerogel-fibre research. It implements every equation and measurement from three papers on thermoplastic-polyurethane aerogels, applied by hand or automatically, and exports straight into OriginLab and Excel.</p>
+      <ul class="specs">
+        <li><b>59 equations</b>Every relation in the source papers, with unit conversion on each input and uncertainty propagated by central differences.</li>
+        <li><b>11 measurements</b>Stress&ndash;strain, cyclic loading, S&ndash;N, strain&ndash;life, density scaling, TGA, DSC, thermal properties, BET, Herschel&ndash;Bulkley, amplitude sweep.</li>
+        <li><b>Automatic import</b>CSV, TSV, TXT, DAT, Excel, JSON and NumPy &mdash; instrument preambles, unit rows and European decimals handled.</li>
+        <li><b>26 validation cases</b>Recomputes values printed in the papers. Two are recorded as disagreements with the papers, with the reasoning stated, rather than quietly adjusted.</li>
+      </ul>
+      <div class="shots">
+        <figure>
+          <img src="assets/aerolab-plots.png" alt="AeroLab Studio plots view with several runs on shared axes" loading="lazy">
+          <figcaption>Plots — several runs on shared axes</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/aerolab-validation.png" alt="AeroLab Studio validation table comparing published and computed values" loading="lazy">
+          <figcaption>Validation — published vs computed</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/aerolab-measurements.png" alt="AeroLab Studio measurements view showing runs and results" loading="lazy">
+          <figcaption>Measurements — runs and results</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/aerolab-export.png" alt="AeroLab Studio export page for Excel, OriginLab and figure sets" loading="lazy">
+          <figcaption>Export — Excel, OriginLab, figures</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/aerolab-calculator.png" alt="AeroLab Studio calculator with searchable equations and uncertainty" loading="lazy">
+          <figcaption>Calculator — equations and uncertainty</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/aerolab-data.png" alt="AeroLab Studio data page showing imported datasets and column mapping" loading="lazy">
+          <figcaption>Data — import and column mapping</figcaption>
+        </figure>
+      </div>
+      <p style="margin-top:20px"><a href="https://github.com/ezzyousef/AeroLab-Studio" target="_blank" rel="noopener">View the repository on GitHub &rarr;</a></p>
+    </div>
+
+    <div class="repos">
+      <a class="repo" href="https://github.com/ezzyousef/supercap_suite" target="_blank" rel="noopener">
+        <b>Supercap Suite</b>
+        <span>Supercapacitor and electrochemical data analysis.</span>
+      </a>
+      <a class="repo" href="https://github.com/ezzyousef/FTIR-XRD-Analysis-Toolkit" target="_blank" rel="noopener">
+        <b>FTIR &amp; XRD Toolkit</b>
+        <span>Processing and interpretation of characterization data.</span>
+      </a>
+      <a class="repo" href="https://github.com/ezzyousef/brookfield-dv1-logger" target="_blank" rel="noopener">
+        <b>Brookfield DV1 Logger</b>
+        <span>Viscometer data logging for the laboratory bench.</span>
+      </a>
+      <a class="repo" href="https://eml-site.vercel.app/" target="_blank" rel="noopener">
+        <b>EML Website</b>
+        <span>Site for the Energy Materials Laboratory at AUC.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="eyebrow">Research positions</p>
+    <h2>Experience</h2>
+    <ul class="tl">
+      <li>
+        <span class="when">Sep 2026 &mdash; present</span>
+        <div class="what">
+          <h3>Research Assistant</h3>
+          <span class="where">Microcellular Plastics Manufacturing Laboratory, University of Toronto</span>
+          <p>Doctoral research on polymeric aerogels reinforced with nanofibres for clothing and thermal-insulation applications, under Prof. Chul B. Park.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">May 2023 &mdash; Aug 2026</span>
+        <div class="what">
+          <h3>Research Assistant</h3>
+          <span class="where">Energy Materials Laboratory, The American University in Cairo</span>
+          <p>Synthesis and characterization of polymeric membranes, semiconductors and quasi-solid-state electrolytes. Built and tested supercapacitor devices, ran full electrochemical characterization, and set up a UV reactor for UV-shielding work.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2021 &mdash; May 2023</span>
+        <div class="what">
+          <h3>Undergraduate Research Assistant</h3>
+          <span class="where">Suez University</span>
+          <p>Nanofibrous scaffolds for wound healing under STDF grant 45441. The laboratory had no electrospinning system, so I built a working setup from available parts and tuned it until it produced stable fibres. Also applied electrocoagulation to contaminant removal from wastewater.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <p class="eyebrow">Background</p>
+    <h2>Education, awards and service</h2>
+
+    <ul class="tl">
+      <li>
+        <span class="when">2026 &mdash; 2030</span>
+        <div class="what">
+          <h3>PhD, Mechanical &amp; Industrial Engineering</h3>
+          <span class="where">University of Toronto</span>
+        </div>
+      </li>
+      <li>
+        <span class="when">2023 &mdash; 2026</span>
+        <div class="what">
+          <h3>MSc, Nanotechnology &mdash; GPA 4.0 / 4.0</h3>
+          <span class="where">The American University in Cairo</span>
+          <p>Thesis: &ldquo;Tuning Ion Mobility and Molecular Confinement in High-Performance Polymer Electrolytes for Energy Storage&rdquo;.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2018 &mdash; 2022</span>
+        <div class="what">
+          <h3>BSc, Physics (Engineering Physics)</h3>
+          <span class="where">Suez University &mdash; Very Good with Honors, ranked third in the class</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="duo" style="margin-top:40px">
+      <div>
+        <p class="eyebrow">Awards</p>
+        <ul class="plain">
+          <li>Allehdaan Best Thesis Award <span class="yr">2026</span></li>
+          <li>School of Sciences &amp; Engineering Honors, AUC <span class="yr">2026</span></li>
+          <li>Best Researcher Award, Science Father <span class="yr">2024</span></li>
+          <li>Laboratory Fellowship, AUC <span class="yr">2024</span></li>
+          <li>University Fellowship, AUC <span class="yr">2023</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Peer review</p>
+        <ul class="plain">
+          <li>Journal of Materials Science: Polymers <span class="yr">2025</span></li>
+          <li>Journal of Materials Science: Materials in Electronics <span class="yr">2025</span></li>
+          <li>Journal of Polymers and the Environment <span class="yr">2025</span></li>
+          <li>Cellulose <span class="yr">2025</span></li>
+          <li>Polymer Bulletin <span class="yr">2025</span></li>
+          <li>Plasmonics <span class="yr">2025</span></li>
+          <li>Polymer Engineering &amp; Science <span class="yr">2025</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:40px">
+      <p class="eyebrow">Leadership</p>
+      <p>Founder and Vice President of the Innovative Nanotechnology Club at AUC, and co-founder of the Sustainability, Energy and Nanomaterials Association student chapter. Elected Vice President of the AUC student chapter of The Electrochemical Society. I have organized lecture series, workshops, competitions and outreach events around energy and nanotechnology.</p>
+    </div>
+  </section>
+
+</main>
+
+<div class="contact" id="contact">
+  <div class="contact-in">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Open to collaboration, consulting and research work</h2>
+    <p>I am interested in collaborations on energy materials and polymer processing, and I take on freelance work in electrochemical data analysis, characterization data interpretation, publication figures and scientific writing. If you have data and are not sure what it is telling you, send it over.</p>
+    <div class="links" style="margin-top:22px">
+      <a class="link primary" href="mailto:ezzyousef@aucegypt.edu">ezzyousef@aucegypt.edu</a>
+      <a class="link" href="https://www.linkedin.com/in/ezz-eldien-yousef" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="link" href="https://scholar.google.com/citations?user=m0Rs9oIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="link" href="https://github.com/ezzyousef" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-in">
+    <span>Ezzeldien Muhammed Yousef &middot; Toronto, Canada</span>
+    <span>Last updated September 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
