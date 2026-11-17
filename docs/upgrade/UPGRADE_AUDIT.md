@@ -23,7 +23,7 @@ One file, `index.html` (885 B): canonical link, `meta refresh` (0 s) and an inli
 | F4 | SEO | No description, no Open Graph | Fixed (OG points at the destination) |
 | F5 | Correctness | No 404 page; broken URLs showed the GitHub default | Fixed: `404.html` (noindex, link to destination) |
 | F6 | SEO | No robots.txt | Added (allow all). No sitemap on purpose: a sitemap listing a redirect stub is counter-productive |
-| F7 | Redirect | `location.replace` already avoids a back-button loop; kept | Verified by test |
+| F7 | Redirect | `location.replace` avoids adding a history entry; kept | Verified by a headless Edge history test (Back from the destination returns to the previous page); other browsers not tested |
 | F8 | Validity | Lowercase doctype | Fixed |
 | F9 | Process | No tests | Added (see test report) |
 
