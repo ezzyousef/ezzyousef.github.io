@@ -21,7 +21,7 @@ for (const [name, h] of [["index", html], ["404", nf]]) {
 ok(/<noscript/.test(html) || /<main/.test(html), "index: content visible without JS");
 ok(html.includes(`<link rel="canonical" href="${DEST}">`), "canonical points at destination");
 ok(html.includes(`http-equiv="refresh" content="0; url=${DEST}"`), "meta refresh to destination");
-ok(html.includes(`<a href="${DEST}"`), "visible destination link");
+ok(new RegExp(`<a\\b[^>]*href="${DEST}"`).test(html), "visible destination link");
 ok(/property="og:title"/.test(html) && html.includes(`property="og:url" content="${DEST}"`), "Open Graph present");
 const js = existsSync("redirect.js") ? read("redirect.js") : "";
 ok(js.includes(DEST) && /location\.replace/.test(js), "redirect.js uses location.replace (no history loop)");
