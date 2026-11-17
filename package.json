@@ -1,0 +1,14 @@
+{
+  "name": "ezzyousef-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Redirect and fallback page for ezzyousef.github.io. Dev tooling only; nothing is shipped to visitors from npm.",
+  "scripts": {
+    "test": "node tests/static.test.mjs && html-validate index.html 404.html && node tests/browser.test.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.2",
+    "html-validate": "9.5.5",
+    "puppeteer-core": "24.4.0"
+  }
+}
